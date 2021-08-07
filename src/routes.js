@@ -9,7 +9,7 @@ router
     .get('/register/:id', UserController.show)
     .post('/register', UserController.store)
     .put('/register/:id', UserController.update)
-    .delete('/register/id', UserController.delete);
+    .delete('/register/:id', UserController.delete);
 
 
 // Rota Home
