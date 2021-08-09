@@ -6,15 +6,15 @@ const UserController = require('./controllers/UserController')
 
 // Rota Token
 router
-    .post('/tokens', TokenController.store);
+    .post('/token', TokenController.store);
 
 // Rota User
 router
-    .get('/register', UserController.index)
-    .get('/register/:id', UserController.show)
-    .post('/register', UserController.store)
-    .put('/register/:id', UserController.update)
-    .delete('/register/:id', UserController.delete);
+    .get('/user', UserController.index)
+    .get('/user/:id', UserController.show)
+    .post('/user', UserController.store)
+    .put('/user/:id', UserController.update)
+    .delete('/user/:id', UserController.delete);
 
 // Rota Home
 router
