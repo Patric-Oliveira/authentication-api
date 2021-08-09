@@ -1,7 +1,12 @@
 const router = require('express').Router();
 
+const TokenController = require('./controllers/TokenController');
 const HomeController = require('./controllers/HomeController');
 const UserController = require('./controllers/UserController')
+
+// Rota Token
+router
+    .post('/tokens', TokenController.store);
 
 // Rota User
 router
@@ -10,7 +15,6 @@ router
     .post('/register', UserController.store)
     .put('/register/:id', UserController.update)
     .delete('/register/:id', UserController.delete);
-
 
 // Rota Home
 router
