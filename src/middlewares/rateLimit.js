@@ -1,6 +1,6 @@
-const {requests} = require('../config/rateLimit')
+const {requests} = require('../config/rateLimit');
 const rateLimit = require('express-rate-limit');
-const slowDown = require('express-slow-down')
+const slowDown = require('express-slow-down');
 
 const limiter = rateLimit({
     windowMs: requests.rateLimit.window,
