@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-rate-limit": "^5.3.0",
     "express-slow-down": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.5",
     "winston": "^3.3.3"
   },
