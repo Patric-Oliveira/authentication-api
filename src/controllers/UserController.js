@@ -1,5 +1,6 @@
 const User = require('../models/User');
 
+
 module.exports = {
 
     // Index
@@ -57,10 +58,7 @@ module.exports = {
                 return res.sendError('Error ao criar usuário', 400);
             }
 
-            return res.json({ 
-                newUser, 
-        
-            });
+            return res.json({ newUser });
                 
         } catch (e) {
             return res.status(400).json({

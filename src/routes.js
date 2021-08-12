@@ -1,8 +1,11 @@
 const router = require('express').Router();
 
+const loginRequired = require('./middlewares/loginRequired');
+
 const TokenController = require('./controllers/TokenController');
-const HomeController = require('./controllers/HomeController');
 const UserController = require('./controllers/UserController')
+const HomeController = require('./controllers/HomeController');
+const ClientController = require('./controllers/ClientController')
 
 // Rota Token
 router
@@ -20,6 +23,10 @@ router
 router
     .get('/', HomeController.index)
     .post('/', HomeController.Store);
+
+// Rota Client
+router
+    .get('/client', loginRequired, ClientController.index);
 
 
 module.exports = router;
